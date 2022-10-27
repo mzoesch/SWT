@@ -1,0 +1,8 @@
+cities:
+n0
+n1
+n2
+streets:
+n0 n1 5
+n0 n2 1
+n1 n2 1
