@@ -1,3 +1,7 @@
+/*
+ * Example Doc here
+ */
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -21,7 +25,7 @@ public class Navigation {
 
   private void go() {
     Region region = readInput();
-    if(region == null) {
+    if (region == null) {
       // Region not present
       System.out.println("ERROR");
     } else {
@@ -50,8 +54,8 @@ public class Navigation {
     Map<City, City> predecessor = new HashMap<>();
     predecessor.put(s1, s1);
     // Queue to sort the cities by distance
-    Queue<RoutingEntry> queue =
-        new PriorityQueue<>(region.cities.size(), Comparator.comparingInt(r -> r.distance));
+    Queue<RoutingEntry> queue = new PriorityQueue<>(region.cities.size(),
+        Comparator.comparingInt(r -> r.distance));
     queue.add(new RoutingEntry(s1, 0));
     Set<City> visited = new HashSet<>();
     // Build a map that stores the neighbors and distances to them for each city.
@@ -127,7 +131,7 @@ public class Navigation {
       return new Region(new HashSet<>(cities.values()), streets);
       // TODO consider using this:
       // return new Region(new TreeSet<>(cities.values()), streets);
-    } catch(IOException e) {
+    } catch (IOException e) {
       return null;
     }
   }

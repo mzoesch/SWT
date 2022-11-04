@@ -1,3 +1,5 @@
+// Zyklomatische Komplexität
+
 public class Kitchen {
 
     enum Flavor {
@@ -16,7 +18,7 @@ public class Kitchen {
         PUMPKIN
     }
 
-    static void cook(MainIngredient mainIngredient, Flavor flavor){
+    static void cook(MainIngredient mainIngredient, Flavor flavor) {
         System.out.println("Flavor: " + flavor + "\nMain Ingredient: " + mainIngredient);
         System.out.println("Result: ");
 
@@ -26,7 +28,7 @@ public class Kitchen {
                 case HAM -> System.out.println("Sandwich");
                 case CHICKEN -> System.out.println("Chicken Wings");
                 case PUMPKIN -> System.out.println("Pumpkin Soup");
-                case STRAWBERRIES-> System.out.println("Strawberry Feta Salad");
+                case STRAWBERRIES -> System.out.println("Strawberry Feta Salad");
                 default -> System.out.println("You can't cook a salty dish with your main ingredient.");
             }
         } else if (flavor == Flavor.SWEET) {
